@@ -79,16 +79,16 @@ Content-Type: application/json
     "currency": "USD",
     "donationDate": "2024-01-01T12:00:00Z"
 }
-Get Donations by Campaign
+#### Get Donations by Campaign 
 http
 GET /api/v1/donations/campaign/{campaignId}
-Get Donations by Donor
+#### Get Donations by Donor
 http
 GET /api/v1/donations/donor/{donorId}
-Get Donation by ID
+#### Get Donation by ID
 http
 GET /api/v1/donations/{id}
-Update Donation Status
+#### Update Donation Status
 http
 PATCH /api/v1/donations/{id}/status
 Content-Type: application/json
@@ -96,7 +96,7 @@ Content-Type: application/json
 {
     "status": "COMPLETED"
 }
-🔧 Performance Optimization
+#### 🔧 Performance Optimization
 The application is optimized for high performance through:
 
 Kafka batch processing with optimized consumer settings
@@ -106,7 +106,7 @@ Connection pooling and thread management
 Batch database operations
 Efficient JSON serialization/deserialization
 Caching strategies for frequently accessed data
-📊 Monitoring & Metrics
+#### 📊 Monitoring & Metrics
 The application exposes several monitoring endpoints:
 
 /actuator/health - Application health check
@@ -115,7 +115,7 @@ The application exposes several monitoring endpoints:
 /actuator/circuitbreakers - Circuit breaker status
 /actuator/loggers - Logging configuration
 /actuator/info - Application info
-🔒 Security
+#### 🔒 Security
 The application implements:
 
 Role-based access control (RBAC)
@@ -125,7 +125,7 @@ SQL injection prevention
 XSS protection
 Rate limiting
 CORS configuration
-🔄 Circuit Breaker Configuration
+#### 🔄 Circuit Breaker Configuration
 The application uses Resilience4j for circuit breaking with the following settings:
 
 Sliding window size: 100
@@ -134,7 +134,7 @@ Failure rate threshold: 50%
 Wait duration in open state: 5 seconds
 Automatic transition from open to half-open state
 Custom fallback mechanisms
-🤝 Contributing
+#### 🤝 Contributing
 Fork the repository
 Create your feature branch (git checkout -b feature/AmazingFeature)
 Commit your changes (git commit -m 'Add some AmazingFeature')
